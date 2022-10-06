@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/hp_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/heart2" />
+
+            <ImageView
+                android:id="@+id/hp_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/heart2" />
+
+            <ImageView
+                android:id="@+id/hp_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/heart2" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/hp_4"
+                android:src="@drawable/heart2" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gonoltam egy szamra!"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/plus_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+" />
+
+        <TextView
+            android:id="@+id/tipp_ertek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/minusz_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/tipp_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="TIPPEL" />
+
+</RelativeLayout>
