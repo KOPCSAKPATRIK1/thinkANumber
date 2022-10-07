@@ -2,6 +2,8 @@ package com.example.thinkanumber;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity
     private int gondolt;
     private Random rnd;
     private int elet;
+    private AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -121,7 +124,7 @@ public class MainActivity extends AppCompatActivity
         }
         if (elet == 0)
         {
-            // TODO: jatek veget ert
+
         }
     }
 
@@ -135,7 +138,7 @@ public class MainActivity extends AppCompatActivity
 
         if (elet == 0)
         {
-            // TODO: jatek veget ert
+            ujJatek();
         }
     }
 
@@ -155,5 +158,33 @@ public class MainActivity extends AppCompatActivity
         gondolt = rnd.nextInt(10) + 1;
         Log.d("gondolt", String.valueOf(gondolt));
         elet = 4;
+        builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setMessage("Szeretne ujat játszani");
+        builder.setNegativeButton("Nem", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i)
+            {
+                finish();
+            }
+        });
+        builder.setPositiveButton("Igen", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                ujJatek();
+            }
+        });
+    }
+
+    private void ujJatek()
+    {
+        tipp = 1;
+        elet = 4;
+        gondolt = rnd.nextInt(10) + 1;
+        Log.d("gondolt", String.valueOf(gondolt));
+        tippErtek.setText(String.valueOf(tipp));
+        for (ImageView iv: hpTomb)
+        {
+            iv.setImageResource(R.drawable.heart2);
+        }
     }
 }
