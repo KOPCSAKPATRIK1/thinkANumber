@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity
     private Button plusBtn;
     private Button minuszBtn;
     private Button tippBtn;
+    private Button konnyuBtn;
+    private Button nehezBtn;
     private ImageView h1;
     private ImageView h2;
     private ImageView h3;
@@ -100,8 +102,21 @@ public class MainActivity extends AppCompatActivity
                     // TODO: gyozelem
                 }
             }
+        });
+        konnyuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
 
+            }
+        });
 
+        nehezBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                
+            }
         });
     }
     private void eletCsokkentSwitchCase()
@@ -147,6 +162,8 @@ public class MainActivity extends AppCompatActivity
         plusBtn = findViewById(R.id.plus_btn);
         minuszBtn = findViewById(R.id.minusz_btn);
         tippBtn = findViewById(R.id.tipp_btn);
+        konnyuBtn = findViewById(R.id.konnyu_btn);
+        nehezBtn = findViewById(R.id.nehez_btn);
         h1 = findViewById(R.id.hp_1);
         h2 = findViewById(R.id.hp_2);
         h3 = findViewById(R.id.hp_3);
